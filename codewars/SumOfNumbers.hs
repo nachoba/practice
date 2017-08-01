@@ -22,6 +22,6 @@ sequenceSum x | x < 0     = show x ++ " < 0"
 -- Read a number
 readNumber :: Int -> String
 readNumber 0 = "0 = 0"
-readNumber 1 = "1+0 = " 
-readNumber x = show x ++ "+" ++ readNumber (x -1)
+readNumber 1 = "0+1 = " 
+readNumber x = readNumber (x -1) ++ "++" ++ show x
 
